@@ -79,5 +79,3 @@ Then launch the interactive demo:
 ```bash
 streamlit run app.py
 ```
-
-ier` to ensure the downstream training didn't bottleneck memory.
