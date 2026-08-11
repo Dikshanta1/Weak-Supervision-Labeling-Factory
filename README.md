@@ -80,16 +80,4 @@ Then launch the interactive demo:
 streamlit run app.py
 ```
 
-## Resume bullet points
-
-> Scaled a programmatic data-labeling pipeline using Snorkel to process **100,000+ real-world customer reviews**, automating the generation of probabilistic training labels and eliminating thousands of manual annotation hours.
->
-> Designed advanced Labeling Functions by fusing regex/keyword heuristics with zero-shot **HuggingFace Transformers (DistilBERT)**, capturing complex semantic context while maintaining high throughput.
-> 
-> Engineered a highly scalable end-to-end ML pipeline using **Parquet** for optimized data storage and an **SGDClassifier** for out-of-core downstream training, outperforming naive majority-vote baselines.
-
-## Talking points for interviews
-
-- **Why not just hand-label?** Cost and scale — hand-labeling doesn't adapt when your label schema changes; weak supervision lets you edit a Python function instead of re-annotating thousands of examples.
-- **How does the LabelModel work without ground truth?** It treats LF outputs as noisy observations of a latent true label and fits a generative model (a factor graph over LF accuracies/correlations) via a matrix completion-style objective — the math is in the original [Snorkel paper (Ratner et al., 2017)](https://arxiv.org/abs/1711.10160).
-- **How did you handle scale?** Prototyped with Pandas/CSV, but quickly migrated to Parquet storage to handle 100k+ rows efficiently. Switched from standard Logistic Regression to `SGDClassifier` to ensure the downstream training didn't bottleneck memory.
+ier` to ensure the downstream training didn't bottleneck memory.
