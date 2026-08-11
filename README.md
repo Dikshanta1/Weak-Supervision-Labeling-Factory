@@ -1,8 +1,8 @@
-# Weak Supervision Data Labeling Factory (Enterprise Scale)
+# Weak Supervision Data Labeling Factory
 
 Programmatic data labeling pipeline that replaces thousands of hours of manual annotation with **heuristic rules, regex patterns, and HuggingFace Transformer models**, mathematically combined via [Snorkel](https://www.snorkel.org/)'s generative `LabelModel` — then validated by training a downstream classifier on the resulting labels.
 
-## Why this project
+## Motivation
 
 Enterprise NLP's real bottleneck is rarely modeling — it's **clean labeled data**. Hand-labeling is slow, expensive, and doesn't scale as label schemas evolve. This project demonstrates the *weak supervision* paradigm: encode domain knowledge as cheap, noisy labeling functions, then let a statistical model learn how much to trust each one — no ground truth required.
 
